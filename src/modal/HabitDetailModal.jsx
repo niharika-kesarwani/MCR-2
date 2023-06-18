@@ -40,10 +40,7 @@ export const HabitDetailModal = () => {
     setHabits({ type: SET_SHOW_DETAIL_MODAL, payload: false });
     setHabits({
       type: ADD_NEW_HABIT,
-      payload: {
-        ...newHabitDetails,
-        goal: `${newHabitDetails.goal} ${newHabitDetails.repeat}`,
-      },
+      payload: newHabitDetails,
     });
   };
 
@@ -95,7 +92,7 @@ export const HabitDetailModal = () => {
           >
             {goals?.map((item) => (
               <option key={item} value={item}>
-                {item} {newHabitDetails.repeat}
+                {item}
               </option>
             ))}
           </select>

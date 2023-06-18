@@ -12,7 +12,17 @@ export const habitsConstants = {
 
 export const repeat = ["Daily", "Monthly", "Yearly"];
 
-export const goals = ["1 time", "2 times", "3 times"];
+export const goals = [
+  "1 time Daily",
+  "1 time Monthly",
+  "1 time Yearly",
+  "2 times Daily",
+  "2 times Monthly",
+  "2 times Yearly",
+  "3 times Daily",
+  "3 times Monthly",
+  "3 times Yearly",
+];
 
 export const timeOfTheDay = [
   "Morning",
