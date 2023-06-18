@@ -16,8 +16,8 @@ export const Archive = () => {
 
   return (
     <div className="mt-24 flex h-screen grow flex-wrap justify-evenly">
-      {archivedHabits?.map((item) => (
-        <HabitCard key={item} habit={item} />
+      {archivedHabits?.map((item, index) => (
+        <HabitCard key={index} habit={item} />
       ))}
     </div>
   );

@@ -152,7 +152,11 @@ export const HabitDetailModal = () => {
             </button>
             <button
               className="rounded bg-secondary hover:bg-primary"
-              onClick={() => setHabits({ type: ADD_TO_ARCHIVE })}
+              type="button"
+              onClick={() => {
+                setHabits({ type: ADD_TO_ARCHIVE });
+                setHabits({ type: SET_SHOW_DETAIL_MODAL, payload: false });
+              }}
             >
               Archive
             </button>
