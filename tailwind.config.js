@@ -6,6 +6,7 @@ export default {
     colors: {
       primary: "#fca5a5",
       secondary: "#fecaca",
+      modal_background: "#cbd5e1",
     },
     screens: {
       sm: "480px",
