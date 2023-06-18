@@ -140,7 +140,7 @@ export const HabitDetailModal = () => {
           Save
         </button>
         {!isNewHabit && (
-          <div>
+          <div className="flex flex-col gap-y-3">
             <button
               className="rounded bg-primary hover:bg-secondary"
               onClick={() =>
