@@ -1,7 +1,8 @@
 import { habitsConstants } from "../constants/habits-constants";
 import { habitsData } from "../data/habits-data";
 
-const { GET_ARCHIVED_HABITS, ARCHIVE_UNARCHIVE_HABIT } = habitsConstants;
+const { GET_ARCHIVED_HABITS, ARCHIVE_UNARCHIVE_HABIT, GET_UNARCHIVED_HABITS } =
+  habitsConstants;
 
 export const habitsReducer = (state, action) => {
   switch (action.type) {
@@ -19,6 +20,11 @@ export const habitsReducer = (state, action) => {
             : item
         ),
       };
+    case GET_UNARCHIVED_HABITS:
+      return {
+        ...state,
+        unArchivedHabits: state?.habits?.filter(({ archived }) => !archived),
+      };
     default:
       return state;
   }
@@ -26,5 +32,6 @@ export const habitsReducer = (state, action) => {
 
 export const initialHabits = {
   habits: habitsData,
-  archivedHabits: [],
+  archivedHabits: habitsData?.filter(({ archived }) => archived),
+  unArchivedHabits: habitsData?.filter(({ archived }) => !archived),
 };
